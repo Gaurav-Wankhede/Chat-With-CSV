@@ -8,6 +8,7 @@ import { ChatMessage } from "@/utils/types";
 import { cn } from "@/lib/utils";
 import remarkGfm from 'remark-gfm';
 import { Charts } from "@/components/charts";
+import { safeJsonParse } from "@/utils/json-helpers";
 
 export default function Home() {
   const [file, setFile] = useState<File | null>(null);
@@ -110,7 +111,8 @@ export default function Home() {
 
   const renderChart = (chartData: string) => {
     try {
-      const data = JSON.parse(chartData);
+      const data = safeJsonParse(chartData);
+      if (!data) return null;
       return <Charts {...data} />;
     } catch (error) {
       console.error('Failed to parse chart data:', error);
@@ -161,7 +163,7 @@ export default function Home() {
           </div>
         )}
 
-        <div className="bg-white/80 dark:bg-gray-800/80 rounded-xl p-2 sm:p-4 h-[350px] sm:h-[400px] md:h-[450px] lg:h-[500px] overflow-y-auto shadow-md backdrop-blur-sm border border-gray-100 dark:border-gray-700">
+        <div className="bg-white/80 dark:bg-gray-800/80 rounded-xl p-2 sm:p-4 h-[500px] sm:h-[400px] md:h-[450px] lg:h-[500px] overflow-y-auto shadow-md backdrop-blur-sm border border-gray-100 dark:border-gray-700">
           {messages.length === 0 ? (
             <div className="h-full flex flex-col items-center justify-center text-gray-400">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 sm:h-12 sm:w-12 mb-2 sm:mb-3 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">

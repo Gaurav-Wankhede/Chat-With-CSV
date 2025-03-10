@@ -50,7 +50,7 @@ export const Charts = ({ type, chartData, options }: ChartProps) => {
 
   const chartTypes = {
     bar: (
-      <div className="w-full min-h-[200px] h-[min(50vh,300px)]">
+      <div className="w-full min-h-[300px] sm:min-h-[200px] h-[min(60vh,400px)] sm:h-[min(50vh,300px)]">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart data={chartData} {...commonProps}>
             <CartesianGrid strokeDasharray="3 3" />
@@ -64,7 +64,7 @@ export const Charts = ({ type, chartData, options }: ChartProps) => {
       </div>
     ),
     line: (
-      <div className="w-full min-h-[200px] h-[min(50vh,300px)]">
+      <div className="w-full min-h-[300px] sm:min-h-[200px] h-[min(60vh,400px)] sm:h-[min(50vh,300px)]">
         <ResponsiveContainer width="100%" height="100%">
           <LineChart data={chartData} {...commonProps}>
             <CartesianGrid strokeDasharray="3 3" />
@@ -78,7 +78,7 @@ export const Charts = ({ type, chartData, options }: ChartProps) => {
       </div>
     ),
     pie: (
-      <div className="w-full min-h-[200px] h-[min(50vh,300px)]">
+      <div className="w-full min-h-[300px] sm:min-h-[200px] h-[min(60vh,400px)] sm:h-[min(50vh,300px)]">
         <ResponsiveContainer width="100%" height="100%">
           <PieChart {...commonProps}>
             <Pie
@@ -102,7 +102,7 @@ export const Charts = ({ type, chartData, options }: ChartProps) => {
       </div>
     ),
     scatter: (
-      <div className="w-full min-h-[200px] h-[min(50vh,300px)]">
+      <div className="w-full min-h-[300px] sm:min-h-[200px] h-[min(60vh,400px)] sm:h-[min(50vh,300px)]">
         <ResponsiveContainer width="100%" height="100%">
           <ScatterChart data={chartData} {...commonProps}>
             <CartesianGrid strokeDasharray="3 3" />
@@ -116,7 +116,7 @@ export const Charts = ({ type, chartData, options }: ChartProps) => {
       </div>
     ),
     area: (
-      <div className="w-full min-h-[200px] h-[min(50vh,300px)]">
+      <div className="w-full min-h-[300px] sm:min-h-[200px] h-[min(60vh,400px)] sm:h-[min(50vh,300px)]">
         <ResponsiveContainer width="100%" height="100%">
           <AreaChart data={chartData} {...commonProps}>
             <CartesianGrid strokeDasharray="3 3" />
@@ -130,7 +130,7 @@ export const Charts = ({ type, chartData, options }: ChartProps) => {
       </div>
     ),
     radial: (
-      <div className="w-full min-h-[200px] h-[min(50vh,300px)]">
+      <div className="w-full min-h-[300px] sm:min-h-[200px] h-[min(60vh,400px)] sm:h-[min(50vh,300px)]">
         <ResponsiveContainer width="100%" height="100%">
           <RadialBarChart data={chartData} {...commonProps}>
             <RadialBar dataKey="value" fill="#8884d8" />
@@ -139,7 +139,7 @@ export const Charts = ({ type, chartData, options }: ChartProps) => {
       </div>
     ),
     radar: (
-      <div className="w-full min-h-[200px] h-[min(50vh,300px)]">
+      <div className="w-full min-h-[300px] sm:min-h-[200px] h-[min(60vh,400px)] sm:h-[min(50vh,300px)]">
         <ResponsiveContainer width="100%" height="100%">
           <RadarChart data={chartData} {...commonProps}>
             <Radar dataKey="value" fill="#8884d8" />
@@ -156,7 +156,7 @@ export const Charts = ({ type, chartData, options }: ChartProps) => {
           {options.title}
         </h4>
       )}
-      <div className="w-full min-h-[200px] h-[min(45vh,250px)]">
+      <div className="w-full min-h-[300px] sm:min-h-[200px] h-[min(60vh,400px)] sm:h-[min(50vh,300px)]">
         {chartTypes[type] || (
           <p className="text-red-500 text-xs sm:text-sm">Unsupported chart type: {type}</p>
         )}
