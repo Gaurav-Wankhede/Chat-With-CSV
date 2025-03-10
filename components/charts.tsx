@@ -19,7 +19,8 @@ import {
   RadialBarChart,
   RadialBar,
   Radar,
-  RadarChart
+  RadarChart,
+  Treemap,
 } from 'recharts';
 
 interface ChartData {
@@ -144,6 +145,15 @@ export const Charts = ({ type, chartData, options }: ChartProps) => {
           <RadarChart data={chartData} {...commonProps}>
             <Radar dataKey="value" fill="#8884d8" />
           </RadarChart>
+        </ResponsiveContainer>
+      </div>
+    ),
+    treemap: (
+      <div className="w-full min-h-[300px] sm:min-h-[200px] h-[min(60vh,400px)] sm:h-[min(50vh,300px)]">
+        <ResponsiveContainer width="100%" height="100%">
+          <Treemap data={chartData} {...commonProps}>
+            <Treemap dataKey="value" fill="#8884d8" />
+          </Treemap>
         </ResponsiveContainer>
       </div>
     )

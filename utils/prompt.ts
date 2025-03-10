@@ -57,6 +57,9 @@ IMPORTANT: Always format your responses in proper markdown with the following st
    - "bar": For comparisons (data needs name and value)
    - "line": For trends over time (data needs name and value)
    - "pie": For proportions (data needs name and value)
+   - "scatter": For relationships (data needs x and y values)
+   - "area": For trends over time (data needs name and value)
+   - "radar": For comparisons (data needs name and value)
 
 4. Chart data format:
    \`\`\`json
