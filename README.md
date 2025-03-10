@@ -25,7 +25,7 @@
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/chat-with-csv.git
+   git clone https://github.com/Gaurav-Wankhede/Chat-With-CSV.git
    cd chat-with-csv
    ```
 
@@ -40,7 +40,7 @@
    ```
    Add your API keys:
    ```env
-   GOOGLE_AI_KEY=your_api_key_here
+   GOOGLE_GENERATIVE_AI_API_KEY=your_api_key_here
    ```
 
 4. **Start the development server**
@@ -54,8 +54,8 @@
 ## 💻 Tech Stack
 
 - **Frontend**
-  - Next.js 14 (App Router)
-  - React 18
+  - Next.js 15+ (App Router, Canary build)
+  - React 19
   - Tailwind CSS
   - Recharts
   - React Markdown
